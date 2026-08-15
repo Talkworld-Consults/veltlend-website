@@ -1,0 +1,31 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/how-it-works",
+      "destination": "/"
+    },
+    {
+      "source": "/explore",
+      "destination": "/"
+    },
+    {
+      "source": "/mobile-app",
+      "destination": "/"
+    },
+    {
+      "source": "/trust",
+      "destination": "/"
+    },
+    {
+      "source": "/faqs",
+      "destination": "/"
+    },
+    {
+      "source": "/waitlist",
+      "destination": "/"
+    }
+  ]
+}
