@@ -271,6 +271,915 @@
   .faq-a p{font-size:14px}
   .footer-col a{font-size:15px}
 }
+
+/* Explore Marketplace visual system */
+.explore-section{background:var(--page)}
+.explore-heading{max-width:860px}
+.marketplace-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:46px}
+.market-card{min-width:0;display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 10px 28px rgba(4,38,28,.055);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.market-card:hover{transform:translateY(-4px);border-color:#b0cfba;box-shadow:0 18px 42px rgba(4,38,28,.11)}
+.market-visual{position:relative;min-height:142px;padding:18px;display:flex;align-items:flex-end;justify-content:space-between;overflow:hidden}
+.market-visual:after{content:"";position:absolute;width:170px;height:170px;right:-65px;top:-75px;border-radius:50%;background:rgba(255,255,255,.10)}
+.visual-mobility{background:linear-gradient(135deg,#0b7f57,#064b36)}
+.visual-housing{background:linear-gradient(135deg,#176c54,#0a4c39)}
+.visual-events{background:linear-gradient(135deg,#346f64,#184d3e)}
+.visual-construction{background:linear-gradient(135deg,#556e59,#304a3a)}
+.visual-agriculture{background:linear-gradient(135deg,#4c7752,#2a5238)}
+.visual-tech{background:linear-gradient(135deg,#3c6470,#1e454f)}
+.visual-fashion{background:linear-gradient(135deg,#785e70,#4c3949)}
+.visual-power{background:linear-gradient(135deg,#607650,#334b37)}
+.visual-tools{background:linear-gradient(135deg,#5d6b60,#34473b)}
+.market-kicker{position:relative;z-index:1;padding:7px 10px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(3,34,25,.2);color:#fff;font-size:.62rem;font-weight:900;letter-spacing:.12em}
+.market-symbol{position:relative;z-index:1;width:58px;height:58px;display:grid;place-items:center;border-radius:17px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.15);font-size:1.5rem}
+.market-content{display:flex;flex:1;flex-direction:column;padding:22px}
+.market-content h3{margin:0;color:var(--ink);font-size:1.14rem;line-height:1.25;letter-spacing:-.03em}
+.market-content p{margin:10px 0 20px;color:var(--muted);font-size:.86rem;line-height:1.7}
+.market-learn{align-self:flex-start;min-height:44px;padding:0 14px;border:1px solid #c8dcd0;border-radius:11px;background:#fff;color:var(--700);font-size:.78rem;font-weight:850;transition:.18s ease}
+.market-learn:hover,.market-learn:focus-visible{border-color:#94bda2;background:var(--100);transform:translateY(-1px)}
+.explore-bottom-note{display:flex;align-items:center;gap:14px;max-width:920px;margin:24px auto 0;padding:16px 18px;border:1px solid #cfe1d6;border-radius:16px;background:#f2f8f3}
+.explore-bottom-mark{width:40px;height:40px;flex:none;display:grid;place-items:center;border-radius:12px;background:var(--900);color:var(--lime);font-weight:900}
+.explore-bottom-note p{margin:0;color:#496057;font-size:.83rem;line-height:1.65}
+.explore-bottom-note strong{color:var(--900)}
+.category-detail-modal{position:fixed;inset:0;z-index:560;display:flex;align-items:center;justify-content:center;padding:20px}
+.category-detail-modal[hidden]{display:none}
+.category-detail-backdrop{position:absolute;inset:0;background:rgba(1,18,12,.74);backdrop-filter:blur(5px)}
+.category-detail-panel{position:relative;z-index:1;width:min(640px,100%);max-height:calc(100dvh - 40px);overflow:auto;padding:34px;border-radius:24px;background:#fff;box-shadow:0 35px 100px rgba(0,0,0,.28)}
+.category-detail-close{position:absolute;right:14px;top:14px;width:48px;height:48px;border:1px solid var(--line);border-radius:50%;background:#f3f7f4;color:var(--900);font-size:1.45rem}
+.category-detail-panel h3{margin:10px 0 8px;font-size:2rem;line-height:1.08;letter-spacing:-.04em;color:var(--ink)}
+.category-detail-intro{margin:0;color:var(--muted);font-size:.95rem;line-height:1.8}
+.category-detail-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.category-detail-box{padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--50)}
+.category-detail-box span{display:block;margin-bottom:7px;color:var(--900);font-size:.8rem;font-weight:900}
+.category-detail-box p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.7}
+.category-detail-footer{display:flex;gap:10px;margin-top:22px}
+.category-detail-footer .btn{min-width:150px}
+@media(max-width:1000px){.marketplace-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+  .marketplace-grid{grid-template-columns:1fr;gap:14px}
+  .market-visual{min-height:134px}
+  .market-content{padding:20px}
+  .explore-bottom-note{align-items:flex-start}
+  .category-detail-panel{padding:26px 20px;border-radius:20px}
+  .category-detail-columns{grid-template-columns:1fr}
+  .category-detail-footer{display:grid;grid-template-columns:1fr}
+  .category-detail-footer .btn{width:100%}
+}
+
+
+/* Explore Marketplace refinement only */
+.explore-section .explore-heading{
+  max-width: 820px;
+  text-align: center;
+}
+.explore-section .explore-heading .label{
+  display:block;
+  text-align:center;
+}
+.explore-section .explore-heading h2{
+  margin-left:auto;
+  margin-right:auto;
+}
+.explore-section .explore-heading p{
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.explore-section .marketplace-grid{
+  width:min(1040px,100%);
+  margin:44px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.explore-section .market-card{
+  min-width:0;
+  min-height:212px;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid #dce7e0;
+  border-radius:18px;
+  box-shadow:0 8px 22px rgba(4,38,28,.045);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.explore-section .market-card:hover{
+  transform:translateY(-3px);
+  border-color:#b5cdbd;
+  box-shadow:0 14px 30px rgba(4,38,28,.09);
+}
+.explore-section .market-card-body{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  padding:22px 22px 20px;
+}
+.explore-section .market-card-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+.explore-section .market-card-top h3{
+  margin:0;
+  color:var(--ink);
+  font-size:1.08rem;
+  line-height:1.3;
+  letter-spacing:-.025em;
+}
+.explore-section .market-card-top span{
+  flex:none;
+  color:#8a9a93;
+  font-size:.68rem;
+  font-weight:850;
+  letter-spacing:.08em;
+}
+.explore-section .market-card-body p{
+  margin:11px 0 18px;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.68;
+}
+.explore-section .market-learn{
+  align-self:flex-start;
+  margin-top:auto;
+  min-height:40px;
+  padding:0 13px;
+  border:0;
+  border-radius:9px;
+  background:transparent;
+  color:var(--700);
+  font-size:.76rem;
+  font-weight:850;
+}
+.explore-section .market-learn:hover,
+.explore-section .market-learn:focus-visible{
+  background:var(--100);
+}
+.explore-section .explore-bottom-note{
+  width:min(760px,100%);
+  margin:22px auto 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  text-align:center;
+  color:#617168;
+  font-size:.78rem;
+  line-height:1.6;
+}
+.explore-section .explore-bottom-note strong{
+  color:var(--900);
+}
+@media(max-width:980px){
+  .explore-section .marketplace-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    width:min(760px,100%);
+  }
+}
+@media(max-width:700px){
+  .explore-section .marketplace-grid{
+    grid-template-columns:1fr;
+    width:min(520px,100%);
+    gap:14px;
+  }
+  .explore-section .market-card{
+    min-height:0;
+  }
+  .explore-section .market-card-body{
+    padding:20px;
+  }
+  .explore-section .explore-bottom-note{
+    display:block;
+  }
+}
+
+
+/* Final Explore Marketplace visual treatment */
+.explore-section .explore-heading{
+  max-width:820px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+.explore-section .explore-heading .label{
+  display:block;
+  text-align:center;
+}
+.explore-section .explore-heading p{
+  max-width:740px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.explore-section .marketplace-grid{
+  width:min(1040px,100%);
+  margin:46px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.explore-section .market-card{
+  min-width:0;
+  min-height:208px;
+  display:flex;
+  background:#fff;
+  border:1px solid #d9e5de;
+  border-radius:18px;
+  box-shadow:0 8px 24px rgba(4,38,28,.045);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.explore-section .market-card:hover{
+  transform:translateY(-3px);
+  border-color:#abc7b5;
+  box-shadow:0 14px 34px rgba(4,38,28,.085);
+}
+.explore-section .market-card-body{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  padding:22px 22px 20px;
+}
+.explore-section .market-card-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+  padding-bottom:12px;
+  border-bottom:1px solid #e8eee9;
+  color:#7b8b84;
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.explore-section .market-card-meta span:first-child{
+  color:#a3b1aa;
+  font-variant-numeric:tabular-nums;
+}
+.explore-section .market-card-meta span:last-child{
+  color:var(--700);
+}
+.explore-section .market-card h3{
+  margin:0;
+  color:var(--ink);
+  font-size:1.12rem;
+  line-height:1.3;
+  letter-spacing:-.03em;
+}
+.explore-section .market-card p{
+  margin:10px 0 18px;
+  color:var(--muted);
+  font-size:.82rem;
+  line-height:1.72;
+}
+.explore-section .market-learn{
+  align-self:flex-start;
+  min-height:40px;
+  margin-top:auto;
+  padding:0 12px;
+  border:0;
+  border-radius:8px;
+  background:transparent;
+  color:var(--700);
+  font-size:.76rem;
+  font-weight:850;
+}
+.explore-section .market-learn:hover,
+.explore-section .market-learn:focus-visible{
+  background:var(--100);
+}
+.explore-section .explore-bottom-note{
+  width:min(640px,100%);
+  margin:22px auto 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  text-align:center;
+  color:#6c7c74;
+  font-size:.76rem;
+}
+.explore-section .explore-bottom-note strong{
+  color:var(--900);
+}
+@media(max-width:980px){
+  .explore-section .marketplace-grid{
+    width:min(760px,100%);
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:700px){
+  .explore-section .marketplace-grid{
+    width:min(520px,100%);
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .explore-section .market-card{
+    min-height:0;
+  }
+  .explore-section .market-card-body{
+    padding:20px;
+  }
+  .explore-section .market-card-meta{
+    margin-bottom:15px;
+  }
+  .explore-section .explore-bottom-note{
+    display:block;
+    line-height:1.6;
+  }
+}
+
+
+/* Explore-only interactive card polish */
+.explore-section .marketplace-grid{
+  width:min(1080px,100%);
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+  margin-top:44px;
+}
+.explore-section .market-card{
+  position:relative;
+  min-height:360px;
+  padding:0;
+  border:1px solid rgba(26,70,52,.12);
+  border-radius:24px;
+  background:#fff;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:0 10px 28px rgba(4,38,28,.055);
+  transform:translateY(0);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,border-color .35s ease;
+}
+.explore-section .market-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  opacity:0;
+  background:linear-gradient(120deg,rgba(255,255,255,0),rgba(255,255,255,.42),rgba(255,255,255,0));
+  transform:translateX(-120%);
+  transition:opacity .25s ease,transform .65s ease;
+}
+.explore-section .market-card:hover,
+.explore-section .market-card:focus-visible{
+  transform:translateY(-8px);
+  border-color:rgba(19,111,76,.28);
+  box-shadow:0 24px 52px rgba(4,38,28,.14);
+  outline:none;
+}
+.explore-section .market-card:hover::after,
+.explore-section .market-card:focus-visible::after{
+  opacity:1;
+  transform:translateX(120%);
+}
+.explore-section .market-card:active{transform:translateY(-3px) scale(.992)}
+.explore-section .market-card-body{
+  width:100%;
+  min-height:360px;
+  padding:0 23px 22px;
+  display:flex;
+  flex-direction:column;
+}
+.explore-section .market-card-header{
+  position:relative;
+  min-height:145px;
+  margin:0 -23px 22px;
+  padding:20px 23px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:18px;
+  overflow:hidden;
+  color:#fff;
+  isolation:isolate;
+}
+.explore-section .market-card-header::before{
+  content:"";
+  position:absolute;
+  width:190px;
+  height:190px;
+  right:-72px;
+  top:-92px;
+  border-radius:50%;
+  background:rgba(255,255,255,.16);
+  z-index:-1;
+}
+.explore-section .market-card-header::after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  left:-55px;
+  bottom:-74px;
+  border-radius:50%;
+  background:rgba(255,255,255,.10);
+  z-index:-1;
+}
+.explore-section .market-card-header .market-kicker{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:0 10px;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;
+  background:rgba(0,0,0,.12);
+  color:#fff;
+  font-size:.61rem;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  backdrop-filter:blur(8px);
+}
+.explore-section .market-card-header .market-symbol{
+  width:58px;
+  height:58px;
+  flex:none;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.30);
+  border-radius:18px;
+  background:rgba(255,255,255,.16);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 10px 25px rgba(0,0,0,.10);
+  font-size:1.55rem;
+  line-height:1;
+  transform:translateY(0) rotate(0deg);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),background .35s ease;
+}
+.explore-section .market-card:hover .market-symbol,
+.explore-section .market-card:focus-visible .market-symbol{
+  transform:translateY(-4px) rotate(-5deg) scale(1.04);
+  background:rgba(255,255,255,.22);
+}
+.explore-section .market-card-header--mobility{background:linear-gradient(135deg,#087a4b 0%,#0b9a68 52%,#075c45 100%)}
+.explore-section .market-card-header--housing{background:linear-gradient(135deg,#155e75 0%,#1c8b78 52%,#0a4e4d 100%)}
+.explore-section .market-card-header--events{background:linear-gradient(135deg,#7b3f8f 0%,#b45591 52%,#5b356e 100%)}
+.explore-section .market-card-header--construction{background:linear-gradient(135deg,#8a5a20 0%,#c48a35 52%,#66451d 100%)}
+.explore-section .market-card-header--agriculture{background:linear-gradient(135deg,#397a3f 0%,#78a845 52%,#245d42 100%)}
+.explore-section .market-card-header--tech{background:linear-gradient(135deg,#315c9c 0%,#4d8ed1 52%,#29456f 100%)}
+.explore-section .market-card-header--fashion{background:linear-gradient(135deg,#9a416d 0%,#d16b8b 52%,#633b68 100%)}
+.explore-section .market-card-header--power{background:linear-gradient(135deg,#5b5b24 0%,#9a9b39 52%,#3c4e2a 100%)}
+.explore-section .market-card-header--tools{background:linear-gradient(135deg,#46565e 0%,#71858a 52%,#33434b 100%)}
+.explore-section .market-card:nth-child(3n+1) .market-card-header::before{animation:exploreOrb 7s ease-in-out infinite}
+.explore-section .market-card:nth-child(3n+2) .market-card-header::before{animation:exploreOrb 8.5s ease-in-out infinite reverse}
+.explore-section .market-card:nth-child(3n) .market-card-header::before{animation:exploreOrb 9s ease-in-out infinite}
+.explore-section .market-card h3{
+  margin:0;
+  color:var(--ink);
+  font-size:1.18rem;
+  line-height:1.3;
+  letter-spacing:-.03em;
+}
+.explore-section .market-card p{
+  margin:10px 0 20px;
+  color:var(--muted);
+  font-size:.84rem;
+  line-height:1.72;
+}
+.explore-section .market-learn{
+  position:relative;
+  z-index:2;
+  align-self:flex-start;
+  min-height:44px;
+  margin-top:auto;
+  padding:0 15px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid #c8dcd0;
+  border-radius:12px;
+  background:#fff;
+  color:var(--700);
+  font-size:.77rem;
+  font-weight:850;
+  box-shadow:0 5px 14px rgba(4,38,28,.045);
+  transition:transform .3s ease,background .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.explore-section .market-learn span{transition:transform .3s ease}
+.explore-section .market-card:hover .market-learn,
+.explore-section .market-card:focus-visible .market-learn,
+.explore-section .market-learn:hover,
+.explore-section .market-learn:focus-visible{
+  border-color:#9dc4ae;
+  background:var(--100);
+  box-shadow:0 8px 18px rgba(4,38,28,.08);
+}
+.explore-section .market-card:hover .market-learn span,
+.explore-section .market-card:focus-visible .market-learn span{transform:translateX(4px)}
+.explore-section .explore-bottom-note{margin-top:26px}
+@keyframes exploreOrb{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-10px,8px,0) scale(1.06)}}
+@media(max-width:980px){
+  .explore-section .marketplace-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:min(760px,100%)}
+}
+@media(max-width:700px){
+  .explore-section .marketplace-grid{grid-template-columns:1fr;width:min(520px,100%);gap:15px}
+  .explore-section .market-card,.explore-section .market-card-body{min-height:0}
+  .explore-section .market-card-header{min-height:136px;margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px}
+  .explore-section .market-card-body{padding-left:20px;padding-right:20px;padding-bottom:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  .explore-section .market-card-header::before{animation:none!important}
+  .explore-section .market-card,.explore-section .market-card::after,.explore-section .market-symbol,.explore-section .market-learn,.explore-section .market-learn span{transition:none!important}
+}
+
+
+/* Explore mobile readability refinement */
+.explore-heading{
+  max-width: 780px;
+  width: 100%;
+}
+.explore-heading p{
+  max-width: 680px;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+.explore-heading h2{
+  max-width: 760px;
+  font-size: clamp(32px, 5vw, 50px);
+  line-height: 1.08;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+@media (max-width:700px){
+  .explore-heading{
+    max-width: 100%;
+  }
+  .explore-heading h2{
+    font-size: clamp(30px, 8.6vw, 40px);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    max-width: 100%;
+  }
+  .explore-heading p{
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.65;
+    letter-spacing: 0;
+  }
+}
+@media (max-width:390px){
+  .explore-heading h2{
+    font-size: 30px;
+    line-height: 1.14;
+  }
+  .explore-heading p{
+    font-size: 16px;
+    line-height: 1.65;
+  }
+}
+
+/* Explore marketplace slider/ticker */
+.ticker{
+  background: #063f2d !important;
+}
+
+
+/* Explore mobile copy spacing + dark-green slider contrast */
+.explore-heading p{
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.ticker,
+.ticker .ticker-track,
+.ticker .ticker-track span{
+  color: #fff !important;
+}
+.ticker svg{
+  stroke: #fff !important;
+  fill: none !important;
+}
+@media (max-width:700px){
+  .explore-heading p{
+    margin: 18px 16px 0;
+    padding: 0 6px;
+    max-width: calc(100% - 32px);
+    line-height: 1.7;
+  }
+}
+@media (max-width:390px){
+  .explore-heading p{
+    margin-left: 14px;
+    margin-right: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+</style>
+
+<style id="explore-professional-redesign">
+/* Explore — compact editorial card system. Scoped to #categories only. */
+#categories.explore-section .marketplace-grid{
+  width:min(1120px,100%);
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:34px;
+}
+#categories.explore-section .market-card{
+  min-height:0;
+  height:100%;
+  border:1px solid #dfe8e2;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 6px 18px rgba(13,45,32,.045);
+  overflow:hidden;
+  position:relative;
+  transition:transform .28s cubic-bezier(.2,.75,.2,1),box-shadow .28s ease,border-color .28s ease,background .28s ease;
+}
+#categories.explore-section .market-card::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:3px;
+  background:var(--card-accent,#087a4b);
+  opacity:.92;
+  z-index:2;
+}
+#categories.explore-section .market-card::after{
+  content:"";
+  position:absolute;
+  width:150px;height:150px;
+  right:-90px;bottom:-100px;
+  border-radius:50%;
+  background:var(--card-soft,rgba(8,122,75,.08));
+  pointer-events:none;
+  transition:transform .45s ease,opacity .35s ease;
+}
+#categories.explore-section .market-card:hover,
+#categories.explore-section .market-card:focus-visible{
+  transform:translateY(-5px);
+  border-color:color-mix(in srgb,var(--card-accent,#087a4b) 28%,#dfe8e2);
+  box-shadow:0 18px 38px rgba(13,45,32,.10);
+  outline:none;
+}
+#categories.explore-section .market-card:hover::after,
+#categories.explore-section .market-card:focus-visible::after{transform:translate(-18px,-18px);}
+#categories.explore-section .market-card-body{
+  min-height:0;
+  height:100%;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+}
+#categories.explore-section .market-card-header{
+  min-height:58px;
+  height:58px;
+  margin:0;
+  padding:10px 16px 9px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  color:var(--ink);
+  background:#fbfcfb;
+  border-bottom:1px solid #edf2ee;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+#categories.explore-section .market-card-header::before{
+  width:90px;height:90px;right:-45px;top:-58px;
+  background:var(--card-soft,rgba(8,122,75,.09));
+  opacity:.9;
+  animation:none!important;
+  z-index:-1;
+}
+#categories.explore-section .market-card-header::after{display:none;}
+#categories.explore-section .market-card-header--mobility{--card-accent:#087a4b;--card-soft:rgba(8,122,75,.10)}
+#categories.explore-section .market-card-header--housing{--card-accent:#19756d;--card-soft:rgba(25,117,109,.10)}
+#categories.explore-section .market-card-header--events{--card-accent:#8b527e;--card-soft:rgba(139,82,126,.10)}
+#categories.explore-section .market-card-header--construction{--card-accent:#9b6b28;--card-soft:rgba(155,107,40,.10)}
+#categories.explore-section .market-card-header--agriculture{--card-accent:#4f8449;--card-soft:rgba(79,132,73,.10)}
+#categories.explore-section .market-card-header--tech{--card-accent:#426e9e;--card-soft:rgba(66,110,158,.10)}
+#categories.explore-section .market-card-header--fashion{--card-accent:#9b5676;--card-soft:rgba(155,86,118,.10)}
+#categories.explore-section .market-card-header--power{--card-accent:#7d7d35;--card-soft:rgba(125,125,53,.10)}
+#categories.explore-section .market-card-header--tools{--card-accent:#5c6d73;--card-soft:rgba(92,109,115,.10)}
+#categories.explore-section .market-card-header .market-kicker{
+  padding:0;
+  border:0;
+  background:transparent;
+  color:#5d6c65;
+  font-size:.62rem;
+  font-weight:850;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  backdrop-filter:none;
+}
+#categories.explore-section .market-card-header .market-symbol{
+  width:32px;height:32px;
+  border:1px solid color-mix(in srgb,var(--card-accent,#087a4b) 20%,#e2eae5);
+  border-radius:9px;
+  background:#fff;
+  color:var(--card-accent,#087a4b);
+  box-shadow:none;
+  font-size:0;
+  transition:transform .3s ease,box-shadow .3s ease,background .3s ease;
+}
+#categories.explore-section .market-card-header .market-symbol svg{
+  width:16px;height:16px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.65;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+#categories.explore-section .market-card:hover .market-symbol,
+#categories.explore-section .market-card:focus-visible .market-symbol{
+  transform:translateY(-1px) scale(1.04);
+  background:color-mix(in srgb,var(--card-accent,#087a4b) 7%,#fff);
+  box-shadow:0 5px 12px color-mix(in srgb,var(--card-accent,#087a4b) 12%,transparent);
+}
+#categories.explore-section .market-card h3{
+  margin:17px 18px 0;
+  color:#17251f;
+  font-size:1rem;
+  line-height:1.3;
+  letter-spacing:-.02em;
+}
+#categories.explore-section .market-card p{
+  margin:7px 18px 14px;
+  color:#6b7972;
+  font-size:.76rem;
+  line-height:1.62;
+  max-width:34em;
+}
+#categories.explore-section .market-learn{
+  align-self:stretch;
+  justify-content:space-between;
+  min-height:38px;
+  margin:0 12px 12px;
+  padding:0 8px 0 10px;
+  border:0;
+  border-top:1px solid #edf2ee;
+  border-radius:0;
+  background:transparent;
+  color:#48685a;
+  font-size:.7rem;
+  font-weight:850;
+  box-shadow:none;
+  text-align:left;
+  transition:color .25s ease,padding .25s ease,background .25s ease;
+}
+#categories.explore-section .market-learn span{font-size:1rem;line-height:1;transition:transform .25s ease;}
+#categories.explore-section .market-card:hover .market-learn,
+#categories.explore-section .market-card:focus-visible .market-learn{
+  color:var(--card-accent,#087a4b);
+  background:transparent;
+}
+#categories.explore-section .market-card:hover .market-learn span,
+#categories.explore-section .market-card:focus-visible .market-learn span{transform:translateX(3px)}
+#categories.explore-section .explore-bottom-note{
+  width:auto;
+  margin:18px auto 0;
+  color:#78857f;
+  font-size:.7rem;
+}
+#categories.explore-section .explore-bottom-note strong{color:#4f6259;}
+@media(max-width:980px){
+  #categories.explore-section .marketplace-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:min(760px,100%);}
+}
+@media(max-width:700px){
+  #categories.explore-section .marketplace-grid{grid-template-columns:1fr;width:min(520px,100%);gap:12px;margin-top:28px;}
+  #categories.explore-section .market-card-header{height:54px;min-height:54px;padding-left:16px;padding-right:14px;}
+  #categories.explore-section .market-card h3{margin-top:15px;}
+  #categories.explore-section .market-card p{margin-bottom:12px;}
+}
+@media(prefers-reduced-motion:reduce){
+  #categories.explore-section .market-card,#categories.explore-section .market-symbol,#categories.explore-section .market-learn,#categories.explore-section .market-card::after{transition:none!important;}
+}
+</style>
+
+
+<style id="explore-seven-plus-more">
+/* Explore-only: 7 primary categories + More. No global selectors. */
+#categories.explore-section .marketplace-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;width:min(1120px,100%);margin:38px auto 0}
+#categories.explore-section .market-card{min-height:258px;border-radius:20px;border:1px solid #dce7e0;background:#fff;box-shadow:0 8px 24px rgba(4,38,28,.045);position:relative;isolation:isolate;transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease,border-color .28s ease}
+#categories.explore-section .market-card:hover,#categories.explore-section .market-card:focus-visible{transform:translateY(-6px);border-color:#a9cdb7;box-shadow:0 18px 40px rgba(4,38,28,.10);outline:none}
+#categories.explore-section .market-card-body{padding:0}
+#categories.explore-section .market-card-header{min-height:104px;padding:16px 17px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;overflow:hidden;position:relative;color:#fff;border-radius:19px 19px 0 0}
+#categories.explore-section .market-card-header::before{content:"";position:absolute;width:150px;height:150px;right:-62px;top:-78px;border-radius:50%;background:rgba(255,255,255,.14);transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+#categories.explore-section .market-card-header::after{content:"";position:absolute;width:74px;height:74px;left:-30px;bottom:-45px;border-radius:50%;background:rgba(255,255,255,.08)}
+#categories.explore-section .market-card:hover .market-card-header::before,#categories.explore-section .market-card:focus-visible .market-card-header::before{transform:translate(-10px,8px) scale(1.08)}
+#categories.explore-section .market-kicker{position:relative;z-index:1;min-height:28px;padding:0 9px;display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.27);border-radius:999px;background:rgba(0,0,0,.12);color:#fff;font-size:.61rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase;backdrop-filter:blur(7px)}
+#categories.explore-section .market-symbol{position:relative;z-index:1;width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.28);border-radius:14px;background:rgba(255,255,255,.15);box-shadow:inset 0 1px 0 rgba(255,255,255,.18);transition:transform .3s cubic-bezier(.2,.8,.2,1),background .3s ease}
+#categories.explore-section .market-symbol svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+#categories.explore-section .market-card:hover .market-symbol,#categories.explore-section .market-card:focus-visible .market-symbol{transform:translateY(-3px) rotate(-4deg);background:rgba(255,255,255,.22)}
+#categories.explore-section .market-content{padding:18px 18px 17px;display:flex;flex-direction:column;min-height:154px}
+#categories.explore-section .market-content h3{margin:0;color:var(--ink);font-size:1.04rem;line-height:1.3;letter-spacing:-.025em}
+#categories.explore-section .market-content p{margin:8px 0 15px;color:var(--muted);font-size:.82rem;line-height:1.62}
+#categories.explore-section .market-learn{margin-top:auto;min-height:40px;padding:0 13px;border:1px solid #c8dcd0;border-radius:10px;background:#fff;color:var(--700);font-size:.77rem;font-weight:850;display:inline-flex;align-items:center;gap:7px;transition:transform .25s ease,background .25s ease,border-color .25s ease,box-shadow .25s ease}
+#categories.explore-section .market-learn span{transition:transform .25s ease}
+#categories.explore-section .market-card:hover .market-learn,#categories.explore-section .market-learn:hover,#categories.explore-section .market-learn:focus-visible{border-color:#94bda2;background:var(--100);box-shadow:0 6px 15px rgba(4,38,28,.06)}
+#categories.explore-section .market-card:hover .market-learn span{transform:translateX(3px)}
+#categories.explore-section .market-card--more .market-card-header{background:linear-gradient(135deg,#172f28 0%,#2b6552 58%,#123d31 100%)}
+#categories.explore-section .market-more-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:11px 0 13px}
+#categories.explore-section .market-more-list .market-learn{margin:0;min-width:0;justify-content:center;padding:0 8px;font-size:.71rem}
+#categories.explore-section .market-more-list .market-learn span{display:none}
+#categories.explore-section .market-more-copy{margin:0!important}
+@media(max-width:1000px){#categories.explore-section .marketplace-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:min(760px,100%)}}
+@media(max-width:650px){#categories.explore-section .marketplace-grid{grid-template-columns:1fr;gap:14px;width:100%;margin-top:28px}#categories.explore-section .market-card{min-height:0}#categories.explore-section .market-card-header{min-height:96px}#categories.explore-section .market-content{min-height:0;padding:17px 18px 18px}#categories.explore-section .market-content h3{font-size:1.08rem}#categories.explore-section .market-content p{font-size:.88rem;line-height:1.65}#categories.explore-section .market-learn{min-height:44px;font-size:.8rem}#categories.explore-section .market-more-list{grid-template-columns:1fr;gap:8px}#categories.explore-section .market-more-list .market-learn{justify-content:flex-start;padding:0 12px;font-size:.78rem}}
+@media(prefers-reduced-motion:reduce){#categories.explore-section .market-card,#categories.explore-section .market-card-header::before,#categories.explore-section .market-symbol,#categories.explore-section .market-learn,#categories.explore-section .market-learn span{transition:none!important}}
+</style>
+
+<style id="explore-accessibility-refinement">
+/* Explore-only accessibility and responsive typography refinement */
+#categories.explore-section .explore-heading{
+  width:100%;
+  max-width:900px;
+  padding-inline:clamp(8px,2vw,24px);
+  box-sizing:border-box;
+}
+#categories.explore-section .explore-heading .label{
+  font-size:14px;
+  line-height:1.4;
+  letter-spacing:.12em;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+#categories.explore-section .explore-heading h2{
+  max-width:860px;
+  font-size:clamp(32px,4.2vw,50px);
+  line-height:1.08;
+  letter-spacing:-.04em;
+  text-wrap:balance;
+}
+#categories.explore-section .explore-heading p{
+  max-width:780px;
+  font-size:18px;
+  line-height:1.75;
+}
+#categories.explore-section .market-card-header .market-kicker{
+  font-size:12px;
+  line-height:1.35;
+  letter-spacing:.1em;
+}
+#categories.explore-section .market-card h3{
+  font-size:21px;
+  line-height:1.3;
+}
+#categories.explore-section .market-card p{
+  font-size:16px;
+  line-height:1.7;
+}
+#categories.explore-section .market-learn{
+  min-height:46px;
+  padding-inline:16px;
+  font-size:15px;
+}
+#categories.explore-section .explore-bottom-note{
+  font-size:15px;
+  line-height:1.6;
+}
+@media (max-width:700px){
+  #categories.explore-section .explore-heading{
+    padding-inline:0;
+  }
+  #categories.explore-section .explore-heading .label{
+    font-size:13px;
+    line-height:1.45;
+  }
+  #categories.explore-section .explore-heading h2{
+    max-width:100%;
+    margin-top:12px;
+    font-size:clamp(30px,8.8vw,40px);
+    line-height:1.1;
+    text-wrap:pretty;
+  }
+  #categories.explore-section .explore-heading p{
+    max-width:100%;
+    margin-top:16px;
+    font-size:17px;
+    line-height:1.72;
+  }
+  #categories.explore-section .market-card-header{
+    min-height:124px;
+  }
+  #categories.explore-section .market-card h3{
+    font-size:20px;
+  }
+  #categories.explore-section .market-card p{
+    font-size:16px;
+    line-height:1.68;
+  }
+  #categories.explore-section .market-learn{
+    min-height:48px;
+    font-size:15px;
+  }
+  #categories.explore-section .explore-bottom-note{
+    font-size:15px;
+  }
+}
+@media (max-width:380px){
+  #categories.explore-section .explore-heading h2{
+    font-size:30px;
+  }
+  #categories.explore-section .explore-heading p{
+    font-size:16px;
+  }
+}
 </style>
 </head>
 <body>
@@ -297,19 +1206,67 @@
           <div class="proof"><div class="avatars" aria-hidden="true"><i>V</i><i>R</i><i>L</i><i>+</i></div><span>Early access is open. Be among the first to know.</span></div>
         </div>
         <div class="visual" data-reveal aria-label="VeltLend app preview">
-          <div class="phone"><div class="notch"></div><div class="status"><span>9:41</span><span>● ● ●</span></div><div class="app-title">Hello, there 👋</div><div class="search">⌕ &nbsp; What do you need today?</div><div class="filters"><span class="filter on">All</span><span class="filter">Cars</span><span class="filter">Homes</span><span class="filter">Tech</span></div><div class="listing"><div class="listing-img">🚗</div><div class="listing-main"><b>Toyota Camry</b><small>Lagos · Verified lender</small></div><span class="price">₦45k/day</span></div><div class="listing"><div class="listing-img">📷</div><div class="listing-main"><b>Sony A7 IV</b><small>Abuja · Verified lender</small></div><span class="price">₦25k/day</span></div><div class="listing"><div class="listing-img">🎪</div><div class="listing-main"><b>Event package</b><small>Wuse · Verified lender</small></div><span class="price">₦80k/day</span></div><div class="verified">✓ Verified users · Built around a safer rental experience</div></div>
+          <div class="phone"><div class="notch"></div><div class="status"><span>9:41</span><span>● ● ●</span></div><div class="app-title">Hello, there 👋</div><div class="search">⌕ &nbsp; What do you need today?</div><div class="filters"><span class="filter on">All</span><span class="filter">Cars</span><span class="filter">Homes</span><span class="filter">Tech</span></div><div class="listing"><div class="listing-img"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16.5h14M6.5 16.5v1.2a1.3 1.3 0 0 1-1.3 1.3h-.7M17.5 16.5v1.2a1.3 1.3 0 0 0 1.3 1.3h.7M6 14l1.4-5h9.2l1.4 5M8.2 14h7.6M8 11h8M7.5 8.9l1-2.1h7l1 2.1M7.2 16.2h.1M16.7 16.2h.1"/></svg></div><div class="listing-main"><b>Toyota Camry</b><small>Lagos · Verified lender</small></div><span class="price">₦45k/day</span></div><div class="listing"><div class="listing-img">📷</div><div class="listing-main"><b>Sony A7 IV</b><small>Abuja · Verified lender</small></div><span class="price">₦25k/day</span></div><div class="listing"><div class="listing-img">🎪</div><div class="listing-main"><b>Event package</b><small>Wuse · Verified lender</small></div><span class="price">₦80k/day</span></div><div class="verified">✓ Verified users · Built around a safer rental experience</div></div>
           <div class="float f1"><span class="ficon">₦</span><div><b>Earn from what you own</b><small>List your idle assets</small></div></div><div class="float f2"><span class="ficon">✓</span><div><b>Built around trust</b><small>Better decisions, better rentals</small></div></div><div class="float f3">Rent smarter. Lend confidently.</div>
         </div>
       </div>
     </section>
 
-    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>CARS</span><span>✦</span><span>HOMES</span><span>✦</span><span>CAMERAS</span><span>✦</span><span>ELECTRONICS</span><span>✦</span><span>GENERATORS</span><span>✦</span><span>EVENTS</span><span>✦</span><span>EQUIPMENTS</span><span>✦</span><span>FURNITURE</span><span>✦</span><span>CARS</span><span>✦</span><span>HOMES</span><span>✦</span><span>CAMERAS</span><span>✦</span><span>ELECTRONICS</span><span>✦</span></div></div>
+    <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>CARS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>HOMES</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>CAMERAS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>ELECTRONICS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>GENERATORS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>EVENTS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>EQUIPMENTS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>FURNITURE</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>CARS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>HOMES</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>CAMERAS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span><span>ELECTRONICS</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M4 12h16"/></svg></span></div></div>
 
     <section class="section" id="how"><div class="wrap"><div class="center" data-reveal><span class="kicker">ONE MARKETPLACE. TWO SIDES.</span><h2>There is more value in what you already have.</h2><p>By connecting a vast network of peers and commercial enterprises, VeltLend redefines ownership. Access short-term essentials on your own terms, from vehicles and gadgets to tools and event equipments, or transform your idle assets into a steady income stream.</p></div><div class="switch" data-reveal><button class="active" type="button" data-role="rent" aria-pressed="true">I want to rent</button><button type="button" data-role="lend" aria-pressed="false">I want to lend</button></div><div class="role-grid" id="roleGrid" data-reveal></div></div></section>
 
-    <section class="section categories" id="categories"><div class="wrap"><div class="center" data-reveal><span class="kicker">EXPLORE THE MARKETPLACE</span><h2>If it can be rented, it belongs here.</h2><p>From everyday essentials to big occasion items, VeltLend is designed to bring useful items closer to the people who need them.</p></div><div class="cats" data-reveal><button class="cat" type="button" data-cat="Cars"><div class="ci" aria-hidden="true">🚗</div><b>Cars</b></button><button class="cat" type="button" data-cat="Homes"><div class="ci" aria-hidden="true">🏠</div><b>Homes</b></button><button class="cat" type="button" data-cat="Cameras"><div class="ci" aria-hidden="true">📷</div><b>Cameras</b></button><button class="cat" type="button" data-cat="Electronics"><div class="ci" aria-hidden="true">💻</div><b>Electronics</b></button><button class="cat" type="button" data-cat="Generators"><div class="ci" aria-hidden="true">⚡</div><b>Generators</b></button><button class="cat" type="button" data-cat="Events"><div class="ci" aria-hidden="true">🎪</div><b>Events</b></button><button class="cat" type="button" data-cat="Equipment"><div class="ci" aria-hidden="true">🛠</div><b>Equipments</b></button><button class="cat" type="button" data-cat="More"><div class="ci" aria-hidden="true">✦</div><b>More</b></button></div><div class="cat-detail" id="catDetail" role="status" aria-live="polite"></div></div></section>
+    
 
-    <section class="section app" id="app"><div class="wrap app-grid"><div class="phones" data-reveal><div class="mini-phone a"><div class="mini-screen"><div class="mini-head">Your rentals.<br>In one place.</div><div class="mini-item">📷 Sony Camera<br><small>Tomorrow · 10:00 AM</small></div><div class="mini-item">✓ Booking confirmed<br><small>Payment secured</small></div></div></div><div class="mini-phone b"><div class="mini-screen"><div class="mini-head">List it.<br>Earn from it.</div><div class="mini-item">🚗 Toyota Camry<br><small>₦45,000 / day</small></div><div class="mini-item">12 rental days<br><small>This month</small></div></div></div></div><div data-reveal><span class="kicker" style="color:var(--lime)">VELTLEND MOBILE APP</span><h2>Your rental marketplace, right in your pocket.</h2><p class="app-copy">Discover listings, manage bookings, list your assets, communicate and stay updated wherever you are. VeltLend is being built mobile first for iOS and Android.</p><div class="features"><div class="feature"><b>Easy discovery</b>Find what you need quickly.</div><div class="feature"><b>Secure transactions</b>Designed around safer payments.</div><div class="feature"><b>In app communication</b>Stay connected with the other side.</div><div class="feature"><b>Rental management</b>Keep bookings and listings organised.</div></div><div class="stores"><div class="store"><span class="ico" aria-hidden="true">●</span><div><small>Coming soon on</small><b>App Store</b></div></div><div class="store"><span class="ico" aria-hidden="true">▶</span><div><small>Coming soon on</small><b>Google Play</b></div></div></div></div></div></section>
+
+<section class="section explore-section" id="categories">
+  <div class="container">
+    <div class="heading explore-heading">
+      <span class="label">EXPLORE THE MARKETPLACE</span>
+      <h2>If it can be rented, it belongs here.</h2>
+      <p>From everyday essentials to big occasion items, VeltLend is designed to bring useful items closer to the people who need them.</p>
+    </div>
+    <div class="marketplace-grid" aria-label="VeltLend marketplace categories">
+      <article class="market-card" tabindex="0" data-card-learn="mobility" aria-label="Open Mobility details"><div class="market-card-body"><div class="market-card-header market-card-header--mobility"><span class="market-kicker">Mobility</span><span class="market-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 16.5h14M6.5 16.5v1.2a1.3 1.3 0 0 1-1.3 1.3h-.7M17.5 16.5v1.2a1.3 1.3 0 0 0 1.3 1.3h.7M6 14l1.4-5h9.2l1.4 5M8.2 14h7.6M8 11h8M7.5 8.9l1-2.1h7l1 2.1M7.2 16.2h.1M16.7 16.2h.1"/></svg></span></div><div class="market-content"><h3>Cars and mobility</h3><p>Access cars, SUVs, motorcycles, vans and other eligible vehicles for short trips, business needs and everyday mobility.</p><button class="market-learn" type="button" data-learn="mobility">Learn more <span aria-hidden="true">→</span></button></div></div></article>
+      <article class="market-card" tabindex="0" data-card-learn="housing" aria-label="Open Homes &amp; Spaces details"><div class="market-card-body"><div class="market-card-header market-card-header--housing"><span class="market-kicker">Homes &amp; Spaces</span><span class="market-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 11.2 12 4l8.5 7.2M5.5 10.5v9h13v-9M9 19.5v-5h6v5"/></svg></span></div><div class="market-content"><h3>Find a place that fits</h3><p>Discover apartments, furnished homes and short stay spaces, with direct tenant to landlord connections where appropriate.</p><button class="market-learn" type="button" data-learn="housing">Learn more <span aria-hidden="true">→</span></button></div></div></article>
+      <article class="market-card" tabindex="0" data-card-learn="events" aria-label="Open Events details"><div class="market-card-body"><div class="market-card-header market-card-header--events"><span class="market-kicker">Events</span><span class="market-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg></span></div><div class="market-content"><h3>Bring the occasion together</h3><p>Rent canopies, seating, sound, lighting, décor, generators and other event essentials without buying everything.</p><button class="market-learn" type="button" data-learn="events">Learn more <span aria-hidden="true">→</span></button></div></div></article>
+      <article class="market-card" tabindex="0" data-card-learn="construction" aria-label="Open Construction details"><div class="market-card-body"><div class="market-card-header market-card-header--construction"><span class="market-kicker">Construction</span><span class="market-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m14.5 4.5 5 5M13 6l-2 2 5 5 2-2M10 10 4 16l4 4 6-6M4 20l-1-1 4-4 1 1"/></svg></span></div><div class="market-content"><h3>Equipment for the job</h3><p>Access construction machinery, scaffolding, concrete equipment, tools and other project equipment when you need it.</p><button class="market-learn" type="button" data-learn="construction">Learn more <span aria-hidden="true">→</span></button></div></div></article>
+      <article class="market-card" tabindex="0" data-card-learn="agriculture" aria-label="Open Agriculture details"><div class="market-card-body"><div class="market-card-header market-card-header--agriculture"><span class="market-kicker">Agriculture</span><span class="market-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 20c4-1 7-4 8-8M8 18c-1-3-.5-6 2-8 2 2 2.5 5 1.5 7M13 12c.5-4 3-6 6-6-.2 3.5-2.2 6-6 6ZM4 20h16"/></svg></span></div><div class="market-content"><h3>Support the season</h3><p>Find tractors, tillers, irrigation, processing and other agricultural equipment without taking on permanent ownership.</p><button class="market-learn" type="button" data-learn="agriculture">Learn more <span aria-hidden="true">→</span></button></div></div></article>
+      <article class="market-card" tabindex="0" data-card-learn="tech" aria-label="Open Technology details"><div class="market-card-body"><div class="market-card-header market-card-header--tech"><span class="market-kicker">Technology</span><span class="market-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M9 20h6M12 16v4M8 19h8"/></svg></span></div><div class="market-content"><h3>Tools for work and creativity</h3><p>Access cameras, lenses, projectors, laptops, speakers and production equipment for projects and professional work.</p><button class="market-learn" type="button" data-learn="tech">Learn more <span aria-hidden="true">→</span></button></div></div></article>
+      <article class="market-card" tabindex="0" data-card-learn="fashion" aria-label="Open Fashion details"><div class="market-card-body"><div class="market-card-header market-card-header--fashion"><span class="market-kicker">Fashion</span><span class="market-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5c1.2 1.5 2.2 2 4 2s2.8-.5 4-2M8 5l-3 3 3 2v9h8v-9l3-2-3-3M12 7v12"/></svg></span></div><div class="market-content"><h3>Dress for the moment</h3><p>Rent wedding gowns, dresses, suits, traditional outfits and accessories for weddings and other special occasions.</p><button class="market-learn" type="button" data-learn="fashion">Learn more <span aria-hidden="true">→</span></button></div></div></article>
+      <article class="market-card market-card--power" tabindex="0" data-card-learn="power" aria-label="Open Power details"><div class="market-card-body"><div class="market-card-header market-card-header--power"><span class="market-kicker">Power</span><span class="market-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13.5 2-7 11h5l-1 9 7-11h-5l1-9Z"/></svg></span></div><div class="market-content"><h3>Power when you need it</h3><p>Access generators, inverters and other eligible power equipment for temporary home, business, project and event needs.</p><button class="market-learn" type="button" data-learn="power">Learn more <span aria-hidden="true">→</span></button></div></div></article>
+    </div>
+    <div class="explore-bottom-note"><strong>Built around access.</strong><span>Rent what you need. List what you own.</span></div>
+  </div>
+</section>
+
+
+<div class="category-detail-modal" id="category-detail-modal" hidden>
+  <div class="category-detail-backdrop" data-modal-close></div>
+  <div class="category-detail-panel" role="dialog" aria-modal="true" aria-labelledby="category-detail-title">
+    <button class="category-detail-close" type="button" aria-label="Close category details" data-modal-close>×</button>
+    <span class="label" id="category-detail-label">Marketplace category</span>
+    <h3 id="category-detail-title">Category</h3>
+    <p class="category-detail-intro" id="category-detail-intro"></p>
+    <div class="category-detail-columns">
+      <div class="category-detail-box">
+        <span>What you may find</span>
+        <p id="category-detail-find"></p>
+      </div>
+      <div class="category-detail-box">
+        <span>How VeltLend helps</span>
+        <p id="category-detail-solution"></p>
+      </div>
+    </div>
+    <div class="category-detail-footer">
+      <button class="btn primary" type="button" id="category-detail-waitlist">Join the waitlist <span aria-hidden="true">→</span></button>
+      <button class="btn secondary" type="button" data-modal-close>Close</button>
+    </div>
+  </div>
+</div>
+
+
+    <section class="section app" id="app"><div class="wrap app-grid"><div class="phones" data-reveal><div class="mini-phone a"><div class="mini-screen"><div class="mini-head">Your rentals.<br>In one place.</div><div class="mini-item">📷 Sony Camera<br><small>Tomorrow · 10:00 AM</small></div><div class="mini-item">✓ Booking confirmed<br><small>Payment secured</small></div></div></div><div class="mini-phone b"><div class="mini-screen"><div class="mini-head">List it.<br>Earn from it.</div><div class="mini-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16.5h14M6.5 16.5v1.2a1.3 1.3 0 0 1-1.3 1.3h-.7M17.5 16.5v1.2a1.3 1.3 0 0 0 1.3 1.3h.7M6 14l1.4-5h9.2l1.4 5M8.2 14h7.6M8 11h8M7.5 8.9l1-2.1h7l1 2.1M7.2 16.2h.1M16.7 16.2h.1"/></svg> Toyota Camry<br><small>₦45,000 / day</small></div><div class="mini-item">12 rental days<br><small>This month</small></div></div></div></div><div data-reveal><span class="kicker" style="color:var(--lime)">VELTLEND MOBILE APP</span><h2>Your rental marketplace, right in your pocket.</h2><p class="app-copy">Discover listings, manage bookings, list your assets, communicate and stay updated wherever you are. VeltLend is being built mobile first for iOS and Android.</p><div class="features"><div class="feature"><b>Easy discovery</b>Find what you need quickly.</div><div class="feature"><b>Secure transactions</b>Designed around safer payments.</div><div class="feature"><b>In app communication</b>Stay connected with the other side.</div><div class="feature"><b>Rental management</b>Keep bookings and listings organised.</div></div><div class="stores"><div class="store"><span class="ico" aria-hidden="true">●</span><div><small>Coming soon on</small><b>App Store</b></div></div><div class="store"><span class="ico" aria-hidden="true">▶</span><div><small>Coming soon on</small><b>Google Play</b></div></div></div></div></div></section>
 
     <section class="section trust" id="trust"><div class="wrap"><div class="center" data-reveal><span class="kicker">TRUST &amp; SAFETY</span><h2>Built for trust. Designed for peace of mind.</h2><p>VeltLend is being designed around the confidence people need when renting from one another.</p></div><div class="trust-grid" data-reveal><div class="trust-card"><div class="trust-icon">✓</div><h3>Identity verification</h3><p>Verified users help create a more accountable marketplace.</p></div><div class="trust-card"><div class="trust-icon">★</div><h3>Reviews &amp; ratings</h3><p>Transparent feedback helps people make better decisions.</p></div><div class="trust-card"><div class="trust-icon">▣</div><h3>Secure transactions</h3><p>Payments are designed with security and accountability in mind.</p></div><div class="trust-card"><div class="trust-icon">☷</div><h3>Clear rental terms</h3><p>Important rental information should be easy to understand before you commit.</p></div></div></div></section>
 
@@ -523,5 +1480,141 @@
 
     document.querySelector('#year').textContent=new Date().getFullYear();
   </script>
+
+<script>
+(() => {
+  const details = {
+    mobility: {
+      label: "Mobility",
+      title: "Move when you need to.",
+      intro: "Vehicle ownership is not always practical for short trips, temporary needs or occasional use. VeltLend is designed around access.",
+      find: "Cars, SUVs, vans, motorcycles and other eligible vehicles for personal, business, travel and short term needs.",
+      solution: "Rent a suitable vehicle when you need it, while owners can turn underused vehicles into an additional source of value."
+    },
+    housing: {
+      label: "Homes & Spaces",
+      title: "Find a space and connect with the right person.",
+      intro: "Finding a suitable place can be fragmented, while property owners need better ways to reach the right people.",
+      find: "Apartments, furnished homes, short stay spaces and other eligible properties.",
+      solution: "VeltLend can bring tenants and landlords closer together, including direct connections where appropriate, while making available spaces easier to discover."
+    },
+    events: {
+      label: "Events & Celebrations",
+      title: "Create the event without buying everything.",
+      intro: "Many event items are expensive to buy and may only be needed for a few hours or days.",
+      find: "Canopies, chairs, tables, sound systems, lighting, décor, generators and other event essentials.",
+      solution: "Rent what the occasion requires and help owners earn from event equipment that would otherwise spend most of its time unused."
+    },
+    construction: {
+      label: "Construction Equipment",
+      title: "Access equipment for the project at hand.",
+      intro: "Heavy equipment and specialised tools can be expensive to purchase for a single project or seasonal workload.",
+      find: "Construction machinery, scaffolding, concrete equipment, compactors, generators, tools and related project equipment.",
+      solution: "Make suitable equipment easier to access when a project needs it while helping equipment owners monetise idle machinery."
+    },
+    agriculture: {
+      label: "Agricultural Equipment",
+      title: "Get the equipment the season requires.",
+      intro: "Farmers often need machinery at specific times without needing year round ownership.",
+      find: "Tractors, tillers, irrigation equipment, processing equipment, harvest equipment and other agricultural machinery.",
+      solution: "VeltLend is designed to make agricultural equipment more accessible through flexible rental and availability based access."
+    },
+    tech: {
+      label: "Technology & Creative",
+      title: "Use professional gear without buying it all.",
+      intro: "Creative projects and short term jobs can require expensive equipment that does not make sense to purchase for one assignment.",
+      find: "Cameras, lenses, lighting, projectors, laptops, speakers and other creative or technology equipment.",
+      solution: "Access the equipment you need for the period you need it, while owners can earn from valuable gear that would otherwise sit idle."
+    },
+    fashion: {
+      label: "Fashion & Occasions",
+      title: "Wear it for the moment. Rent it for the memory.",
+      intro: "Many special occasion outfits are expensive, worn once or a few times and then left unused.",
+      find: "Wedding gowns, bridal accessories, evening dresses, suits, traditional outfits and other occasion wear.",
+      solution: "Rent the right outfit for the moment while owners can create value from pieces already in their wardrobe."
+    },
+    power: {
+      label: "Power & Utilities",
+      title: "Power when you need it.",
+      intro: "Temporary power needs can make buying and maintaining equipment unnecessarily expensive.",
+      find: "Generators, inverters and other eligible power equipment for homes, businesses, projects and events.",
+      solution: "Make short term access to useful power equipment simpler and more flexible."
+    },
+    tools: {
+      label: "Tools & Equipment",
+      title: "Get the tool. Finish the job. Move on.",
+      intro: "People often need a tool for one project without needing to own it permanently.",
+      find: "Power tools, cleaning equipment, DIY tools, household equipment and other practical items.",
+      solution: "Make everyday equipment easier to access while helping owners earn from tools that would otherwise stay unused."
+    }
+  };
+
+  const modal = document.getElementById("category-detail-modal");
+  if (!modal) return;
+  const label = document.getElementById("category-detail-label");
+  const title = document.getElementById("category-detail-title");
+  const intro = document.getElementById("category-detail-intro");
+  const find = document.getElementById("category-detail-find");
+  const solution = document.getElementById("category-detail-solution");
+  const waitlist = document.getElementById("category-detail-waitlist");
+  let lastFocus = null;
+
+  function openModal(key) {
+    const item = details[key];
+    if (!item) return;
+    lastFocus = document.activeElement;
+    label.textContent = item.label;
+    title.textContent = item.title;
+    intro.textContent = item.intro;
+    find.textContent = item.find;
+    solution.textContent = item.solution;
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+    requestAnimationFrame(() => modal.querySelector("[data-modal-close]").focus());
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.classList.remove("modal-open");
+    if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+  }
+
+  document.querySelectorAll("[data-learn]").forEach(button => {
+    button.addEventListener("click", event => {
+      event.preventDefault();
+      event.stopPropagation();
+      openModal(button.dataset.learn);
+    });
+  });
+
+  document.querySelectorAll("[data-card-learn]").forEach(card => {
+    card.addEventListener("click", event => {
+      if (event.target.closest("button")) return;
+      openModal(card.dataset.cardLearn);
+    });
+    card.addEventListener("keydown", event => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      if (event.target.closest("button")) return;
+      event.preventDefault();
+      openModal(card.dataset.cardLearn);
+    });
+  });
+
+  modal.querySelectorAll("[data-modal-close]").forEach(element => {
+    element.addEventListener("click", closeModal);
+  });
+
+  waitlist.addEventListener("click", () => {
+    closeModal();
+    const opener = document.querySelector("[data-open]");
+    if (opener) opener.click();
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !modal.hidden) closeModal();
+  });
+})();
+</script>
+
 </body>
 </html>
