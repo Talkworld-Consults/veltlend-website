@@ -868,6 +868,36 @@
   }
 }
 
+
+/* Waitlist form: make the interest select match the email field on mobile */
+#modalForm .wait-fields input,
+#modalForm .wait-fields select {
+  width: 100%;
+  min-height: 50px;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+  border-radius: 10px;
+}
+
+#modalForm .wait-fields select {
+  color: #17372b;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  #modalForm .wait-fields input,
+  #modalForm .wait-fields select {
+    min-height: 50px;
+    padding: 12px 14px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
 </style>
 
 <style id="explore-professional-redesign">
@@ -1304,7 +1334,7 @@
       <div class="footer-main">
         <div class="footer-brand"><a class="logo" href="#home" aria-label="VeltLend home"><img src="assets/veltlend-logo.png" alt=""><span class="logo-word" style="color:#fff">Velt<span style="color:var(--lime)">Lend</span></span></a><div class="footer-tag">Rent smarter. Lend confidently.</div><p class="footer-desc">VeltLend connects communities through peer-to-peer rentals, empowering individuals and businesses to access what they need and monetize what they own.</p><div class="footer-stores"><div class="footer-store"><small>Coming soon<br><strong style="color:#fff">App Store</strong></small></div><div class="footer-store"><small>Coming soon<br><strong style="color:#fff">Google Play</strong></small></div></div></div>
         <div class="footer-col"><h4>Company</h4><a href="#home">About VeltLend</a><a href="#how">How it works</a><a href="#waitlist">Careers</a><a href="#waitlist">Press</a><a href="#faq">Contact</a></div>
-        <div class="footer-col"><h4>Marketplace</h4><a href="#categories">Explore all</a><a href="#categories">Cars</a><a href="#categories">Homes</a><a href="#categories">Cameras</a><a href="#categories">Electronics</a><a href="#categories">Equipments</a></div>
+        <div class="footer-col"><h4>Marketplace</h4><a href="#categories">Explore all</a><a href="#categories">Mobility</a><a href="#categories">Homes</a><a href="#categories">Events</a><a href="#categories">Fashion</a><a href="#categories">Equipments</a></div>
         <div class="footer-col"><h4>For users</h4><a href="#how">For renters</a><a href="#how">For lenders</a><a href="#trust">Safety &amp; trust</a><a href="#faq">FAQs</a><a href="#waitlist">Join waitlist</a></div>
         <div class="footer-col"><h4>Legal</h4><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="cookies.html">Cookie Policy</a><a href="refunds.html">Refund &amp; Cancellation</a></div>
         <div class="contact">
